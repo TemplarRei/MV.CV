@@ -1,8 +1,8 @@
-﻿namespace Mvcv.Data.Common
+﻿namespace MV.CV.Data.Common
 {
     using System.Linq;
 
-    using Mvcv.Data.Common.Models;
+    using Models;
 
     public interface IDbRepository<T> : IDbRepository<T, int>
         where T : BaseModel<int>

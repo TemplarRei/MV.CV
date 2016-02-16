@@ -1,4 +1,4 @@
-﻿namespace Mvcv.Data.Common.Models
+﻿namespace MV.CV.Data.Common.Models
 {
     using System;
 

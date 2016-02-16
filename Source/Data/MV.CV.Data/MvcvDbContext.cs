@@ -1,4 +1,4 @@
-﻿namespace Mvcv.Data
+﻿namespace MV.CV.Data
 {
     using System;
     using System.Data.Entity;

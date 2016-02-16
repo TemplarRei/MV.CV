@@ -1,16 +1,17 @@
-﻿namespace Mvcv.Web.Controllers
+﻿namespace MV.CV.Web.Controllers
 {
     using System.Linq;
     using System.Threading.Tasks;
     using System.Web;
     using System.Web.Mvc;
 
+    using Data.Models;
+
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin.Security;
 
-    using Mvcv.Data.Models;
-    using Mvcv.Web.ViewModels.Account;
+    using MV.CV.Web.ViewModels.Account;
 
     [Authorize]
     public class AccountController : BaseController

@@ -1,9 +1,9 @@
-﻿namespace Mvcv.Web.Controllers
+﻿namespace MV.CV.Web.Controllers
 {
     using System.Web.Mvc;
     using AutoMapper;
     using Infrastructure.Mapping;
-    using Mvcv.Services.Web;
+    using MV.CV.Services.Web;
 
     public abstract class BaseController : Controller
     {

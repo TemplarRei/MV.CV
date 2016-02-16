@@ -1,4 +1,4 @@
-﻿namespace Mvcv.Web.ViewModels.Account
+﻿namespace MV.CV.Web.ViewModels.Account
 {
     public class ExternalLoginListViewModel
     {

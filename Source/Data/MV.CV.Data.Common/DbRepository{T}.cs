@@ -1,10 +1,10 @@
-﻿namespace Mvcv.Data.Common
+﻿namespace MV.CV.Data.Common
 {
     using System;
     using System.Data.Entity;
     using System.Linq;
 
-    using Mvcv.Data.Common.Models;
+    using Models;
 
     // TODO: Why BaseModel<int> instead BaseModel<TKey>?
     public class DbRepository<T> : IDbRepository<T>

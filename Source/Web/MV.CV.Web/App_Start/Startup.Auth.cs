@@ -1,4 +1,4 @@
-﻿namespace Mvcv.Web
+﻿namespace MV.CV.Web
 {
     using System;
 
@@ -7,8 +7,8 @@
     using Microsoft.Owin;
     using Microsoft.Owin.Security.Cookies;
 
-    using Mvcv.Data;
-    using Mvcv.Data.Models;
+    using Data;
+    using Data.Models;
 
     using Owin;
 

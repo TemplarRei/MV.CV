@@ -1,4 +1,4 @@
-﻿namespace Mvcv.Web.Controllers
+﻿namespace MV.CV.Web.Controllers
 {
     using System.Linq;
     using System.Threading.Tasks;
@@ -9,7 +9,7 @@
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin.Security;
 
-    using Mvcv.Web.ViewModels.Manage;
+    using MV.CV.Web.ViewModels.Manage;
 
     [Authorize]
     public class ManageController : BaseController

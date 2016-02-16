@@ -1,4 +1,4 @@
-﻿namespace Mvcv.Web
+﻿namespace MV.CV.Web
 {
     using System.Data.Entity;
     using System.Reflection;

@@ -1,4 +1,4 @@
-﻿namespace Mvcv.Web
+﻿namespace MV.CV.Web
 {
     using System.Web.Optimization;
 
@@ -24,7 +24,10 @@
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/bootstrap-theme.css",
+                      "~/Content/styles.css",
+                      "~/Content/bootstrap-table.css"));
         }
     }
 }

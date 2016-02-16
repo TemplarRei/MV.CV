@@ -1,4 +1,4 @@
-﻿namespace Mvcv.Web.Infrastructure.Mapping
+﻿namespace MV.CV.Web.Infrastructure.Mapping
 {
     using System;
     using System.Linq;

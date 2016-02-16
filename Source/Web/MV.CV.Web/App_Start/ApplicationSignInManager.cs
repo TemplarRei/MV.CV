@@ -1,13 +1,15 @@
-﻿namespace Mvcv.Web
+﻿namespace MV.CV.Web
 {
     using System.Security.Claims;
     using System.Threading.Tasks;
+
+    using Data.Models;
 
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin;
     using Microsoft.Owin.Security;
 
-    using Mvcv.Data.Models;
+    using MV.CV.Web;
 
     public class ApplicationSignInManager : SignInManager<User, string>
     {

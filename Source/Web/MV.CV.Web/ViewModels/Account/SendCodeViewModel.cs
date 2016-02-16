@@ -1,4 +1,4 @@
-﻿namespace Mvcv.Web.ViewModels.Account
+﻿namespace MV.CV.Web.ViewModels.Account
 {
     using System.Collections.Generic;
     using System.Web.Mvc;

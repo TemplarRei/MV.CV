@@ -2,9 +2,9 @@
 
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(Mvcv.Web.Startup))]
+[assembly: OwinStartupAttribute(typeof(MV.CV.Web.Startup))]
 
-namespace Mvcv.Web
+namespace MV.CV.Web
 {
     public partial class Startup
     {

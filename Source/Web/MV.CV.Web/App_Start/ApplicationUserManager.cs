@@ -1,4 +1,4 @@
-﻿namespace Mvcv.Web
+﻿namespace MV.CV.Web
 {
     using System;
 
@@ -7,8 +7,8 @@
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin;
 
-    using Mvcv.Data;
-    using Mvcv.Data.Models;
+    using Data;
+    using Data.Models;
 
     // Configure the application user manager used in this application. UserManager is defined in ASP.NET Identity and is used by the application.
     public class ApplicationUserManager : UserManager<User>
@@ -33,11 +33,11 @@
             // Configure validation logic for passwords
             manager.PasswordValidator = new PasswordValidator
                                             {
-                                                RequiredLength = 6,
-                                                RequireNonLetterOrDigit = true,
-                                                RequireDigit = true,
-                                                RequireLowercase = true,
-                                                RequireUppercase = true,
+                                                RequiredLength = 5,
+                                                RequireNonLetterOrDigit = false,
+                                                RequireDigit = false,
+                                                RequireLowercase = false,
+                                                RequireUppercase = false,
                                             };
 
             // Configure user lockout defaults

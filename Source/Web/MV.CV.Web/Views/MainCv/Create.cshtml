@@ -1,11 +1,18 @@
 ﻿
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Create your CV";
 }
-
+@Styles.Render("~/jQueryUi")
+@Scripts.Render("~/bundles/jqueryui")
 @Html.Partial("Sidebar")
 
-<div class="container">
+<script>
+    $(function () {
+        $(".draggable-element").draggable({ containment: "#containment-wrapper", scroll: false });
+    });
+</script>
 
+<div id="containment-wrapper" class="container">
+    <a id="draggable3" class="draggable ui-widget-content">
+    </a>
 </div>
-

@@ -6,6 +6,7 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
     <script src="~/Scripts/lumino.glyphs.js"></script>
 </head>
 <body>
@@ -40,7 +41,6 @@
     <footer class="navbar-fixed-bottom text-center">
         <p>&copy; @DateTime.Now.Year - Bootstrap theme <a href="http://medialoot.com/item/lumino-admin-bootstrap-template/">Lumino by Medialoot</a></p>
     </footer>
-    @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>

@@ -1,6 +1,37 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+
 <div class="row">
-    <h1>Hi!</h1>
+    <div class="col-lg-12">
+        <h1 class="page-header">Dashboard</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-md-6 col-lg-3">
+        <a href="@Url.Action("Create", "MainCv")" class="panel panel-teal panel-widget ">
+            <div class="row no-padding">
+                <div class="col-sm-3 col-lg-4 widget-left">
+                    <svg class="glyph stroked app window with content"><use xlink:href="#stroked-app-window-with-content" /></svg>
+                </div>
+                <div class="col-sm-9 col-lg-8 widget-right">
+                    <div class="large text-center">Create a CV</div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+        <div class="col-xs-12 col-md-6 col-lg-3">
+            <a href="#" class="panel panel-orange panel-widget ">
+                <div class="row no-padding">
+                    <div class="col-sm-3 col-lg-4 widget-left">
+                        <svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil" /></svg>
+                    </div>
+                    <div class="col-sm-9 col-lg-8 widget-right">
+                        <div class="large text-center">Edit your CV</div>
+                    </div>
+                </div>
+            </a>
+        </div>
 </div>

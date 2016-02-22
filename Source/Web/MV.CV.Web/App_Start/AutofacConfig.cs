@@ -11,6 +11,7 @@
 
     using Data;
     using Data.Common;
+    using Services.Data;
     using Services.Web;
 
     public static class AutofacConfig
@@ -55,8 +56,9 @@
                 .As<IIdentifierProvider>()
                 .InstancePerRequest();
 
-            // var servicesAssembly = Assembly.GetAssembly(typeof(IJokesService));
-            // builder.RegisterAssemblyTypes(servicesAssembly).AsImplementedInterfaces();
+            var servicesAssembly = Assembly.GetAssembly(typeof(IProfileServices));
+            builder.RegisterAssemblyTypes(servicesAssembly).AsImplementedInterfaces();
+
             builder.RegisterGeneric(typeof(DbRepository<>))
                 .As(typeof(IDbRepository<>))
                 .InstancePerRequest();

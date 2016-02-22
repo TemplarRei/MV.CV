@@ -1,4 +1,4 @@
-namespace MV.CV.Data.Migrations
+﻿namespace MV.CV.Data.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

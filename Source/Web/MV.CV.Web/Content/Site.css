@@ -9,6 +9,18 @@
     padding-right: 15px;
 }
 
+#containment-wrapper {
+    display:flex;
+    flex-flow:column;
+    height: 86vh;
+    width: 100%;
+}
+
+table {
+    width:auto;
+
+}
+
 .account-links,
 .account-links > li,
 .account-links > li > a {

@@ -17,6 +17,18 @@
         {
         }
 
+        public IDbSet<UserProfile> UserProfiles { get; set; }
+
+        public IDbSet<Certification> Certifications { get; set; }
+
+        public IDbSet<Education> Educations { get; set; }
+
+        public IDbSet<Job> Jobs { get; set; }
+
+        public IDbSet<Language> Languages { get; set; }
+
+        public IDbSet<Project> Projects { get; set; }
+
         public static MvcvDbContext Create()
         {
             return new MvcvDbContext();

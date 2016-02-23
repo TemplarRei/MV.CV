@@ -38,6 +38,21 @@
                 "~/Scripts/jQueryUi/jquery-ui.css",
                 "~/Scripts/jQueryUi/jquery-ui.structure.css",
                 "~/Scripts/jQueryUi/jquery-ui.theme.css"));
+
+            // Theme bundles.
+            bundles.Add(new ScriptBundle("~/themes/freelancer-scripts").Include(
+                "http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js",
+                "~/Scripts/freelancer-theme-scripts/classie.js",
+                "~/Scripts/freelancer-theme-scripts/cbpAnimatedHeader.js",
+                "~/Scripts/freelancer-theme-scripts/jqBootstrapValidation.js",
+                "~/Scripts/freelancer-theme-scripts/contact_me.js",
+                "~/Scripts/freelancer-theme-scripts/freelancer.js"));
+
+            bundles.Add(new StyleBundle("~/themes/freelancer-styles").Include(
+                "~/Content/feelancer-theme-css/freelancer.css",
+                "~/Content/font-awesome/css/font-awesome.min.css",
+                "http://fonts.googleapis.com/css?family=Montserrat:400,700",
+                "http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"));
         }
     }
 }

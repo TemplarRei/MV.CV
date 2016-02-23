@@ -21,6 +21,13 @@
             return this.View();
         }
 
+        [HttpGet]
+        public ActionResult ViewProfile(string url)
+        {
+            var activeProfile = this.profiles.GetActiveProfileByUrl(url);
+            return this.View(activeProfile);
+        }
+
         [HttpPost]
         [Authorize]
         [ValidateAntiForgeryToken]
@@ -29,6 +36,7 @@
             if (this.ModelState.IsValid)
             {
                 var dbo = this.Mapper.Map<UserProfile>(model);
+                dbo.IsActive = true;
                 this.profiles.AddBasicProfile(dbo);
             }
 

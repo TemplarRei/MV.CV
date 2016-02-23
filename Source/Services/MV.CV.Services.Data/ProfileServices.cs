@@ -22,5 +22,12 @@
             this.profiles.Add(profile);
             this.profiles.Save();
         }
+
+        public UserProfile GetActiveProfileByUrl(string url)
+        {
+            var profile = this.profiles.All().Where(up => up.Url == url && up.IsActive).FirstOrDefault();
+
+            return profile;
+        }
     }
 }

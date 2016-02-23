@@ -5,5 +5,7 @@
     public interface IProfileServices
     {
         void AddBasicProfile(UserProfile profile);
+
+        UserProfile GetActiveProfileByUrl(string url);
     }
 }

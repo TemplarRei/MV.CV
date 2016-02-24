@@ -7,13 +7,13 @@ namespace MV.CV.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class UserProfileEmailUpdate : IMigrationMetadata
+    public sealed partial class PleaseWork : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(UserProfileEmailUpdate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(PleaseWork));
         
         string IMigrationMetadata.Id
         {
-            get { return "201602232306244_UserProfileEmailUpdate"; }
+            get { return "201602241135315_PleaseWork"; }
         }
         
         string IMigrationMetadata.Source

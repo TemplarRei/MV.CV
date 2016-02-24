@@ -203,9 +203,11 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LanguageController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="App_Start\GlimpseSecurityPolicy.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
+    <Compile Include="Controllers\EditProjectsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -246,11 +248,13 @@
     <Content Include="Content\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\freelancer-theme-css\bootstrap.min.css" />
     <Content Include="Content\freelancer-theme-css\freelancer.css" />
+    <Content Include="Content\img\game.png" />
     <Content Include="Content\styles.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -295,7 +299,7 @@
     <Content Include="Areas\ProfileView\Views\_ViewStart.cshtml" />
     <Content Include="Areas\ProfileView\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\ProfileView\Views\View\Index.cshtml" />
-    <Content Include="Areas\ProfileView\Views\Projects\ProjectsView.cshtml" />
+    <Content Include="Areas\ProfileView\Views\Shared\ProjectsView.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -372,10 +376,15 @@
     <Content Include="Views\MainCv\Sidebar.cshtml" />
     <Content Include="Views\Profile\Create.cshtml" />
     <Content Include="Views\Profile\Edit.cshtml" />
+    <Content Include="Views\EditProjects\View.cshtml" />
+    <Content Include="Views\EditProjects\EditProjects.cshtml" />
+    <Content Include="Views\EditProjects\AddProject.cshtml" />
+    <Content Include="Views\Language\AddLanguage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\ProfileView\Models\" />
+    <Folder Include="Areas\ProfileView\Views\Projects\" />
     <Folder Include="ViewModels\Home\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>

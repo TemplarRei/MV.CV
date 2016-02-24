@@ -42,8 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ILanguageServices.cs" />
     <Compile Include="IProfileServices.cs" />
+    <Compile Include="IProjectServices.cs" />
+    <Compile Include="LanguageServices.cs" />
     <Compile Include="ProfileServices.cs" />
+    <Compile Include="ProjectServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

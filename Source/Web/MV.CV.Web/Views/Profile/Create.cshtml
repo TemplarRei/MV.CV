@@ -5,7 +5,7 @@
 }
 
 <h2>Enter your basic info, so we can start the CV</h2>
-
+@Styles.Render("~/Content/datepicker.css");
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()    
@@ -28,7 +28,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Birthday, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Birthday, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Birthday, new { htmlAttributes = new { @class = "form-control datepicker" } })
                 @Html.ValidationMessageFor(model => model.Birthday, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -45,4 +45,12 @@
             </div>
         </div>
     </div>
+}
+@Scripts.Render("~/Scripts/bootstrap-datepicker.js")
+@section scripts {
+    <script>
+        $(".datepicker").datepicker({
+            format: 'mm-dd-yyyy'
+        });
+    </script>
 }

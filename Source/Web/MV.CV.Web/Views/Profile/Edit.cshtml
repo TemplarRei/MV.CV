@@ -3,13 +3,13 @@
 @{
     ViewBag.Title = "Edit";
 }
-
+@Styles.Render("~/Content/datepicker.css");
 <h2>Edit</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Edit your basic info: </h4>
         <hr />
@@ -41,7 +41,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Birthday, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Birthday, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Birthday, new { htmlAttributes = new { @class = "form-control datepicker" } })
                 @Html.ValidationMessageFor(model => model.Birthday, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -54,4 +54,22 @@
     </div>
 }
 
-@Html.ActionLink("Edit your projects", "EditProjects", "Projects");
+<div class="row"><h3>Or edit your other details</h3></div>
+<div class="row">
+    <div class="btn-group" role="group">
+        @Html.ActionLink("Add a project", "AddProject", new { controller = "EditProjects" }, new { @class = "btn btn-success btn-lg" })
+        @Html.ActionLink("Edit your projects", "EditProjects", new { controller = "EditProjects" }, new { @class = "btn btn-success btn-lg" })
+    </div>
+    <div class="btn-group" role="group">
+        @Html.ActionLink("Add a language", "AddLanguage", new { controller = "Language" }, new { @class = "btn btn-success btn-lg" })
+        @Html.ActionLink("Edit your languages", "EditLanguages", new { controller = "Language" }, new { @class = "btn btn-success btn-lg" })
+    </div>
+</div>
+@Scripts.Render("~/Scripts/bootstrap-datepicker.js")
+@section scripts {
+    <script>
+        $(".datepicker").datepicker({
+            format: 'mm-dd-yyyy'
+        });
+    </script>
+}

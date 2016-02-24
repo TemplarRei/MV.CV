@@ -1,6 +1,7 @@
 ﻿namespace MV.CV.Web.ViewModels.Profile
 {
     using System;
+    using System.Collections.Generic;
     using System.ComponentModel;
     using System.Linq;
 
@@ -28,6 +29,8 @@
         public bool HasEducation { get; set; }
 
         public bool HasProjects { get; set; }
+
+        public ICollection<Project> Projects { get; set; }
 
         public bool HasLanguages { get; set; }
 

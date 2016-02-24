@@ -63,8 +63,14 @@
     <Compile Include="Migrations\201602221711498_UserProfileAddedNames.cs" />
     <Compile Include="Migrations\201602222244026_ProfileColumnRestrictions.cs" />
     <Compile Include="Migrations\201602232306244_UserProfileEmailUpdate.cs" />
-    <Compile Include="Migrations\201602232306244_UserProfileEmailUpdate.Designer.cs">
-      <DependentUpon>201602232306244_UserProfileEmailUpdate.cs</DependentUpon>
+    <Compile Include="Migrations\201602240846318_ProfileIdFieldAdded.cs" />
+    <Compile Include="Migrations\201602241115321_ImStupid.cs" />
+    <Compile Include="Migrations\201602241115321_ImStupid.Designer.cs">
+      <DependentUpon>201602241115321_ImStupid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602241135315_PleaseWork.cs" />
+    <Compile Include="Migrations\201602241135315_PleaseWork.Designer.cs">
+      <DependentUpon>201602241135315_PleaseWork.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MvcvDbContext.cs" />
@@ -95,8 +101,11 @@
     </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201602232306244_UserProfileEmailUpdate.resx">
-      <DependentUpon>201602232306244_UserProfileEmailUpdate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201602241115321_ImStupid.resx">
+      <DependentUpon>201602241115321_ImStupid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602241135315_PleaseWork.resx">
+      <DependentUpon>201602241135315_PleaseWork.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

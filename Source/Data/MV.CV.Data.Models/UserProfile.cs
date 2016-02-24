@@ -9,7 +9,21 @@
 
     public class UserProfile : BaseModel<int>
     {
-        [ForeignKey("User")]
+        private ICollection<Project> projects;
+        private ICollection<Job> jobs;
+        private ICollection<Education> education;
+        private ICollection<Language> languages;
+        private ICollection<Certification> certifications;
+
+        public UserProfile()
+        {
+            this.projects = new HashSet<Project>();
+            this.jobs = new HashSet<Job>();
+            this.education = new HashSet<Education>();
+            this.languages = new HashSet<Language>();
+            this.certifications = new HashSet<Certification>();
+        }
+
         public string UserId { get; set; }
 
         public bool IsActive { get; set; }
@@ -22,21 +36,22 @@
         [StringLength(100)]
         public string LastName { get; set; }
 
+        [ForeignKey("UserId")]
         public virtual User User { get; set; }
 
         public DateTime Birthday { get; set; }
 
         public string Email { get; set; }
 
-        public virtual ICollection<Job> Jobs => new HashSet<Job>();
+        public virtual ICollection<Job> Jobs { get { return this.jobs; } set { this.jobs = value; } }
 
-        public virtual ICollection<Education> Education => new HashSet<Education>();
+        public virtual ICollection<Education> Education { get { return this.education; } set { this.education = value; } }
 
-        public virtual ICollection<Project> Projects => new HashSet<Project>();
+        public virtual ICollection<Project> Projects { get { return this.projects; } set { this.projects = value; } }
 
-        public virtual ICollection<Language> Languages => new HashSet<Language>();
+        public virtual ICollection<Language> Languages { get { return this.languages; } set { this.languages = value; } }
 
-        public virtual ICollection<Certification> Certifications => new HashSet<Certification>();
+        public virtual ICollection<Certification> Certifications { get { return this.certifications; } set { this.certifications = value; } }
 
         public string SoftSkills { get; set; }
 

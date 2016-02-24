@@ -13,6 +13,6 @@
 
         UserProfile GetActiveProfileByUserId(string id);
 
-        void UpdateBasicInfo(string id, string firstName, string lastName, string email, DateTime birthday);
+        void UpdateBasicInfo(string id, string firstName, string lastName, string email, DateTime? birthday);
     }
 }

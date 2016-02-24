@@ -73,6 +73,7 @@
             }
 
             this.profiles.Update(toUpdate);
+            this.profiles.Save();
         }
     }
 }

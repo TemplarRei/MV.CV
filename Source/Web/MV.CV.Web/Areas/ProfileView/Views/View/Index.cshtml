@@ -31,7 +31,7 @@
 <!-- Projects Section -->
 @if (Model.HasProjects)
 {
-    Html.RenderPartial("ProjectsView");
+    Html.RenderPartial("ProjectsView", new MV.CV.Web.ViewModels.Projects.ProjectViewModel { Projects = Model.Projects });
 }
 <!-- Basic Info Section -->
 <section class="success" id="about">

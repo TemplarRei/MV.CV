@@ -17,6 +17,6 @@
         public string Email { get; set; }
 
         [DisplayName("Birthday")]
-        public DateTime Birthday { get; set; }
+        public DateTime? Birthday { get; set; }
     }
 }

@@ -49,9 +49,21 @@
         [Authorize]
         public ActionResult Edit()
         {
-            var profile = this.Mapper.Map<BasicProfileEditViewModel>(this.profiles.GetActiveProfileByUserId(this.User.Identity.GetUserId());
+            var profile = this.Mapper.Map<BasicProfileEditViewModel>(this.profiles.GetActiveProfileByUserId(this.User.Identity.GetUserId()));
 
             return this.View(profile);
+        }
+
+        [HttpPost]
+        [Authorize]
+        public ActionResult Edit(BasicProfileEditViewModel model)
+        {
+            if (this.ModelState.IsValid)
+            {
+                this.profiles.UpdateBasicInfo(this.User.Identity.GetUserId(), model.FirstName, model.LastName, model.Email, model.Birthday);
+            }
+
+            return this.View();
         }
     }
 }

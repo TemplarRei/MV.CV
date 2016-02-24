@@ -1,0 +1,50 @@
+﻿@model MV.CV.Web.ViewModels.Projects.ProjectViewModel
+
+@{
+    ViewBag.Title = "EditProjects";
+}
+
+<h2>EditProjects</h2>
+
+
+@Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>ProjectViewModel</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    @foreach (var project in Model.Projects)
+    {
+        using (Html.BeginForm("EditProject", "EditProjects", FormMethod.Post))
+        {
+            @Html.HiddenFor(model => project.Id);
+            <div class="form-group">
+                @Html.LabelFor(model => project.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => project.Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => project.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => project.Url, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => project.Url, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => project.Url, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => project.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => project.Description, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => project.Description, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>
+        }
+    }
+</div>

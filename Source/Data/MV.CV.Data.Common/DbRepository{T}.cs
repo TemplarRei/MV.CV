@@ -2,6 +2,7 @@
 {
     using System;
     using System.Data.Entity;
+    using System.Data.Entity.Infrastructure;
     using System.Linq;
 
     using Models;
@@ -42,6 +43,17 @@
         public void Add(T entity)
         {
             this.DbSet.Add(entity);
+        }
+
+        public virtual void Update(T entity)
+        {
+            DbEntityEntry entry = this.Context.Entry(entity);
+            if (entry.State == EntityState.Detached)
+            {
+                this.DbSet.Attach(entity);
+            }
+
+            entry.State = EntityState.Modified;
         }
 
         public void Delete(T entity)

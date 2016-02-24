@@ -1,7 +1,9 @@
 ﻿namespace MV.CV.Web.ViewModels.Profile
 {
     using System;
+    using System.Collections.Generic;
     using System.ComponentModel;
+    using AutoMapper;
     using Data.Models;
     using Infrastructure.Mapping;
 

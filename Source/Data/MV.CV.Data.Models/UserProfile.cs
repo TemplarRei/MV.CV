@@ -24,7 +24,9 @@
 
         public virtual User User { get; set; }
 
-        public virtual ICollection<string> Emails => new HashSet<string>();
+        public DateTime Birthday { get; set; }
+
+        public string Email { get; set; }
 
         public virtual ICollection<Job> Jobs => new HashSet<Job>();
 
@@ -33,8 +35,6 @@
         public virtual ICollection<Project> Projects => new HashSet<Project>();
 
         public virtual ICollection<Language> Languages => new HashSet<Language>();
-
-        public DateTime Birthday { get; set; }
 
         public virtual ICollection<Certification> Certifications => new HashSet<Certification>();
 

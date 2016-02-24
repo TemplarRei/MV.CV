@@ -2,6 +2,7 @@
 {
     using System.Web.Mvc;
     using Data.Models;
+    using Microsoft.AspNet.Identity;
     using Services.Data;
     using ViewModels.Profile;
 
@@ -37,10 +38,20 @@
             {
                 var dbo = this.Mapper.Map<UserProfile>(model);
                 dbo.IsActive = true;
+                dbo.UserId = this.User.Identity.GetUserId();
                 this.profiles.AddBasicProfile(dbo);
             }
 
             return this.Redirect("/");
+        }
+
+        [HttpGet]
+        [Authorize]
+        public ActionResult Edit()
+        {
+            var profile = this.Mapper.Map<BasicProfileEditViewModel>(this.profiles.GetActiveProfileByUserId(this.User.Identity.GetUserId());
+
+            return this.View(profile);
         }
     }
 }

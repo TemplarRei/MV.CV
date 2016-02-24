@@ -22,16 +22,31 @@
         </a>
     </div>
 
-        <div class="col-xs-12 col-md-6 col-lg-3">
-            <a href="#" class="panel panel-orange panel-widget ">
-                <div class="row no-padding">
-                    <div class="col-sm-3 col-lg-4 widget-left">
-                        <svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil" /></svg>
-                    </div>
-                    <div class="col-sm-9 col-lg-8 widget-right">
-                        <div class="large text-center">Edit your CV</div>
-                    </div>
+    <div class="col-xs-12 col-md-6 col-lg-3">
+        <a href="#" class="panel panel-orange panel-widget ">
+            <div class="row no-padding">
+                <div class="col-sm-3 col-lg-4 widget-left">
+                    <svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil" /></svg>
                 </div>
-            </a>
-        </div>
+                <div class="col-sm-9 col-lg-8 widget-right">
+                    <div class="large text-center">Edit your CV</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    @if (this.User.Identity.IsAuthenticated)
+    {
+    <div class="col-xs-12 col-md-6 col-lg-3">
+        <a href="~/ProfileView/@ViewBag.Url" class="panel panel-orange panel-widget ">
+            <div class="row no-padding">
+                <div class="col-sm-3 col-lg-4 widget-left">
+                    <svg class="glyph stroked eye"><use xlink:href="#stroked-eye" /></svg>
+                </div>
+                <div class="col-sm-9 col-lg-8 widget-right">
+                    <div class="large text-center">View</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    }
 </div>

@@ -34,6 +34,8 @@
 
         public bool HasLanguages { get; set; }
 
+        public ICollection<Language> Languages { get; set; }
+
         public bool HasCertifications { get; set; }
 
         public bool HasSoftSkills { get; set; }

@@ -1,0 +1,41 @@
+﻿@model MV.CV.Web.ViewModels.Languages.LanguageViewModel
+
+@{
+    ViewBag.Title = "LanguagesView";
+}
+
+<section class="success" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Known Languages</h2>
+                <hr class="star-light">
+            </div>
+        </div>
+        @foreach (var language in Model.Languages)
+        {
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>@language.Name</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-offset-4 col-lg-3">
+                    <p>Oral Proficiency</p>
+                </div>
+                <div class="col-lg-5 text-left">
+                    <p>@language.OralProficiency</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-offset-4 col-lg-3">
+                    <p>Written Proficiency</p>
+                </div>
+                <div class="col-lg-5 text-left">
+                    <p>@language.WrittenProficiency</p>
+                </div>
+            </div>
+            <hr class="star-light">
+        }
+    </div>
+</section>

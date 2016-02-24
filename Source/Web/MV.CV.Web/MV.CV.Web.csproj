@@ -220,6 +220,7 @@
     <Compile Include="ViewModels\Account\ResetPasswordViewModel.cs" />
     <Compile Include="ViewModels\Account\SendCodeViewModel.cs" />
     <Compile Include="ViewModels\Account\VerifyCodeViewModel.cs" />
+    <Compile Include="ViewModels\Languages\LanguageViewModel.cs" />
     <Compile Include="ViewModels\Manage\AddPhoneNumberViewModel.cs" />
     <Compile Include="ViewModels\Manage\ChangePasswordViewModel.cs" />
     <Compile Include="ViewModels\Manage\FactorViewModel.cs" />
@@ -300,6 +301,7 @@
     <Content Include="Areas\ProfileView\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\ProfileView\Views\View\Index.cshtml" />
     <Content Include="Areas\ProfileView\Views\Shared\ProjectsView.cshtml" />
+    <Content Include="Areas\ProfileView\Views\Shared\LanguagesView.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

@@ -3,6 +3,7 @@
     using System.Web.Mvc;
     using Data.Models;
     using Services.Data;
+
     public class LanguageController : Controller
     {
         private readonly ILanguageServices languages;
@@ -24,8 +25,7 @@
         public ActionResult AddLanguage(Language language)
         {
             this.languages.Add(language, 1);
-            return this.View("Edit");
+            return this.RedirectToAction("Edit", "Profile");
         }
-
     }
 }
